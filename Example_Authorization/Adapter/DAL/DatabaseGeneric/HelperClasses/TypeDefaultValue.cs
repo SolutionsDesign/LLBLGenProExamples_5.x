@@ -1,8 +1,8 @@
 ﻿///////////////////////////////////////////////////////////////
 // This is generated code. 
 //////////////////////////////////////////////////////////////
-// Code is generated using LLBLGen Pro version: 4.2
-// Code is generated on: vrijdag 20 juni 2014 13:07:04
+// Code is generated using LLBLGen Pro version: 5.0
+// Code is generated on: donderdag 21 april 2016 12:25:27
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -91,10 +91,28 @@ namespace SD.LLBLGen.Pro.Examples.Authorization.HelperClasses
 						case "System.Byte[]":
 							valueToReturn = new byte[0];
 							break;
+						case "System.DateTimeOffset":
+							valueToReturn = DateTimeOffset.MinValue;
+							break;
+						case "System.TimeSpan":
+							valueToReturn = TimeSpan.MinValue;
+							break;
 					}
 					break;					
 				case TypeCode.Single:
 					valueToReturn = 0.0f;
+					break;
+				case TypeCode.UInt16:
+					valueToReturn = (ushort)0;
+					break;
+				case TypeCode.UInt32:
+					valueToReturn = (uint)0;
+					break;
+				case TypeCode.UInt64:
+					valueToReturn = (ulong)0;
+					break;
+				case TypeCode.SByte:
+					valueToReturn = (SByte)0;
 					break;
 				default:
 					// do nothing, return null.

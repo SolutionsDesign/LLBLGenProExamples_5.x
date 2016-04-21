@@ -160,7 +160,7 @@ namespace SD.LLBLGen.Pro.Examples.Authorization.GUI
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Main";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "LLBLGen Pro v4.x Authorization Example";
+			this.Text = "LLBLGen Pro v5.x Authorization Example";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
