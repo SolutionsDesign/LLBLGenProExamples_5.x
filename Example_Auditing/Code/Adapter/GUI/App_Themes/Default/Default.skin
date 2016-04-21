@@ -1,0 +1,4 @@
+﻿<%-- Button skin so all the buttons look the same --%>
+<asp:button SkinId="ButtonSkin" runat="server" CssClass="FormButtons" />
+<%-- Skin for the (mm/dd/yyyy) text label next to a DateTextBox control. You can control with the next line to show them or not. --%>
+<asp:label SkinId="DateDescriptionLabelSkin" runat="server" Visible="false" />

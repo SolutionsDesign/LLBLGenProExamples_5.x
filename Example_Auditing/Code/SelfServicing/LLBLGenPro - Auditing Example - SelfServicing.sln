@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Auditing.GUI", "GUI\SD.LLBLGen.Pro.Examples.Auditing.GUI.csproj", "{F51E8547-877F-4866-B6E2-A078001BD9B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Auditing.Auditors.SimpleTextFileAuditor", "Auditors\SimpleTextFileAuditor\SD.LLBLGen.Pro.Examples.Auditing.Auditors.SimpleTextFileAuditor.csproj", "{E4A4721D-3803-4043-A304-5A0172AC9212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Auditing.LoginHelper", "LoginHelper\SD.LLBLGen.Pro.Examples.Auditing.LoginHelper.csproj", "{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditor", "Auditors\DatabaseAuditor\SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditor.csproj", "{1BCB0278-AB4A-4428-8D92-B287868E03AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditorSpecific", "Auditors\DatabaseAuditorSpecific\SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditorSpecific.csproj", "{C5C8D122-CABD-4DB0-AB43-71308058BF89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Auditing", "DAL\SD.LLBLGen.Pro.Examples.Auditing.csproj", "{C9D7AA70-4F50-4BD9-B63E-AD168D03F42C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F51E8547-877F-4866-B6E2-A078001BD9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51E8547-877F-4866-B6E2-A078001BD9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51E8547-877F-4866-B6E2-A078001BD9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51E8547-877F-4866-B6E2-A078001BD9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A4721D-3803-4043-A304-5A0172AC9212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A4721D-3803-4043-A304-5A0172AC9212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A4721D-3803-4043-A304-5A0172AC9212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A4721D-3803-4043-A304-5A0172AC9212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCB0278-AB4A-4428-8D92-B287868E03AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCB0278-AB4A-4428-8D92-B287868E03AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCB0278-AB4A-4428-8D92-B287868E03AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCB0278-AB4A-4428-8D92-B287868E03AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5C8D122-CABD-4DB0-AB43-71308058BF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C8D122-CABD-4DB0-AB43-71308058BF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C8D122-CABD-4DB0-AB43-71308058BF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C8D122-CABD-4DB0-AB43-71308058BF89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D7AA70-4F50-4BD9-B63E-AD168D03F42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D7AA70-4F50-4BD9-B63E-AD168D03F42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D7AA70-4F50-4BD9-B63E-AD168D03F42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D7AA70-4F50-4BD9-B63E-AD168D03F42C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

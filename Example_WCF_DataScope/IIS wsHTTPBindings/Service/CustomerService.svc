@@ -1,0 +1,1 @@
+<%@ServiceHost language=c# Debug="true" CodeBehind="~/CustomerService.cs" Service="SD.LLBLGen.Pro.Examples.WCF.Service.NorthwindService"%>

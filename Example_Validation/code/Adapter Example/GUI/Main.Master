@@ -1,0 +1,95 @@
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="Main.master.cs" Inherits="AdapterWebApp.Main" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>LLBLGen Pro v4.0 Validation Examples</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- 
+  
+  TOP NAV
+  
+  -->
+        <div id="mainnav-container">
+            <div id="mainnav">
+                <div class="none">
+                    <a href="#maincontent">skip to the main content area of this page</a></div>
+                <ul>
+                    <li><a href="default.aspx" title="Go to the home page">
+                        Home</a></li>
+                    <li><a href="Customers.aspx" title="Customers list in a GridView">
+                        Customers</a></li>
+                    <li><a href="Products.aspx" title="Products List in a GridView">
+                        Products</a></li>
+                    <li><a href="Orders.aspx" title="Orders and their details (Master-Details).">
+                        Orders</a></li>
+                    <li><a href="Employees.aspx" title="Employees details (Master-Details).">
+                        Employees</a></li>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <!-- 
+  
+  SITE NAME & SLOGAN
+  
+  -->
+        <div id="header">
+            <a href="default.aspx" title="Go to the home page">Northwind</a>
+            <div id="slogan">
+                Validation examples using LLBLGen Pro v4 (Adapter Template)</div>
+        </div>
+        <div id="content-container">
+            <!-- 
+	
+	SIDE COLUMN
+	
+	-->
+            <div id="content-side">
+                <ul class="link-list-vertical">
+                    <li><a href="Customers.aspx" title="Customers list in a GridView.">
+                        Customers</a></li>
+                    <li><a href="Products.aspx" title="Products list in a GridView.">
+                        Products</a></li>
+                    <li><a href="Orders.aspx" title="Orders and their details (Master-Details).">
+                        Orders</a></li>
+                    <li><a href="Employees.aspx" title="Employees details (Master-Details).">
+                        Employees</a></li>
+                </ul>
+            </div>
+            <!-- 
+	
+	MAIN COLUMN
+	
+	-->
+            <div id="content">
+                <a title="maincontent" id="maincontent"></a>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="clear">
+                </div>
+                <!-- 
+	
+  FOOTER
+  
+  -->
+                <div id="footer">
+                    <p>
+                        <a href="http://www.llblgen.com">www.llblgen.com</a><br />
+                        © 2002-2013 Solutions Design 
+                    </p>
+                </div>
+            </div>
+            <!-- 
+	
+	SIDE 2 COLUMN
+	
+	-->
+            <div id="content-side-2">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

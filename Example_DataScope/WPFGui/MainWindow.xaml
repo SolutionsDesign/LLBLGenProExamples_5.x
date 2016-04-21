@@ -1,0 +1,53 @@
+﻿<Window x:Class="Northwind.WPFGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Data Scope example WPF, Adapter" Height="367.197" Width="710.068" WindowStartupLocation="CenterScreen"
+        xmlns:data="clr-namespace:Northwind.BO;assembly=Northwind.BO" ResizeMode="NoResize"
+        >
+    <Window.Resources>
+        <data:NWStatistics x:Key="stats" />
+    </Window.Resources>
+    <Grid>
+        <GroupBox Header="Northwind Statistics" Margin="10,142,9.068,52.197" Name="_statsGroup">
+            <GroupBox.DataContext>
+                <Binding Source="{StaticResource stats}" />
+            </GroupBox.DataContext>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="188*"/>
+                    <ColumnDefinition Width="128*"/>
+                    <ColumnDefinition Width="19*"/>
+                    <ColumnDefinition Width="136*"/>
+                    <ColumnDefinition Width="158*" />
+                    <ColumnDefinition Width="42*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Number of Customers" Margin="0" Height="23" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="1" Margin="0,3" Text="{Binding Path=NumberOfCustomers}" Focusable="False" IsTabStop="False" VerticalContentAlignment="Center"/>
+                <Label Grid.Row="1" Content="Average order price" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=AverageOrderPrice, StringFormat='C'}" HorizontalAlignment="Stretch" Focusable="False" IsTabStop="False" VerticalContentAlignment="Center" Margin="0,3,0,4"/>
+                <Label Grid.Row="2" Content="Highest order price" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=MaxOrderPrice, StringFormat='C'}" Focusable="False" IsTabStop="False" VerticalContentAlignment="Center" Margin="0,3,0,4"/>
+                <Label Grid.Row="2" Grid.Column="3" Content="Ordered by customer" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="4" Grid.Row="2" Text="{Binding Path=MaxOrderCustomerCompanyName}" Focusable="False" IsTabStop="False" VerticalContentAlignment="Center" Margin="0,3,0,4"/>
+                <Button Grid.Column="5" Grid.Row="2" Content="Edit" Name="_editHighestPriceCustomerButton" RenderTransformOrigin="0.904,1.126" Width="32" HorizontalAlignment="Left" Margin="0,3,0,4" Click="_editHighestPriceCustomerButton_Click"/>
+                <Label Grid.Row="3" Content="Most orders per customer" Height="26" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=MostOrdersForOneCustomer}" Focusable="False" IsTabStop="False" VerticalContentAlignment="Center" Margin="0,3,0,4"/>
+                <Label Grid.Row="3" Grid.Column="3" Content="Ordered by customer" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="4" Grid.Row="3" Text="{Binding Path=MostOrdersCustomerCompanyName}" Focusable="False" IsTabStop="False" VerticalContentAlignment="Center" Margin="0,3,0,4"/>
+                <Button Grid.Column="5" Grid.Row="3" Content="Edit" Name="_editMostOrdersCustomerButton" RenderTransformOrigin="0.904,1.126" Width="32" Margin="0,3,0,4" HorizontalAlignment="Left" Click="_editMostOrdersCustomerButton_Click"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Exit" Margin="0,0,10,10" HorizontalAlignment="Right" Width="73" Height="24" VerticalAlignment="Bottom" Name="_exitButton" Click="_exitButton_Click"/>
+        <StackPanel HorizontalAlignment="Left" Height="112" Margin="10,10,0,0" VerticalAlignment="Top" Width="264">
+            <Label Content="Please select your option below"/>
+            <Button Content="Open the Customer Manager" Name="_openCustomerManagerButton" Margin="0,4,0,0" Click="_openCustomerManagerButton_Click"/>
+            <Button Content="Open the Customers-by-product Lister" Margin="0,4,0,0" Name="_openCustomersByProductListerButton" Click="_openCustomersByProductListerButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

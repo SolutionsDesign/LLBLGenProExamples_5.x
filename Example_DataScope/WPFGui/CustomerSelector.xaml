@@ -1,0 +1,42 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:EntityClasses="clr-namespace:Northwind.DAL.EntityClasses;assembly=Northwind.DAL" mc:Ignorable="d" x:Class="Northwind.WPFGui.CustomerSelector"
+        Title="Select a customer" Height="381.7" Width="590" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="customerEntityViewSource" d:DesignSource="{d:DesignInstance {x:Type EntityClasses:CustomerEntity}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource customerEntityViewSource}" Margin="0,0,0,2.7" RenderTransformOrigin="0.5,0.61">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="133*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Grid.Row="0" x:Name="_customersGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="addressColumn" Width="SizeToHeader" Header="Address" Binding="{Binding Address}"/>
+                <DataGridTextColumn x:Name="cityColumn" Width="SizeToHeader" Header="City" Binding="{Binding City}"/>
+                <DataGridTextColumn x:Name="companyNameColumn" Width="SizeToHeader" Header="Company Name" Binding="{Binding CompanyName}"/>
+                <DataGridTextColumn x:Name="contactNameColumn" Width="SizeToHeader" Header="Contact Name" Binding="{Binding ContactName}"/>
+                <DataGridTextColumn x:Name="contactTitleColumn" Width="SizeToHeader" Header="Contact Title" Binding="{Binding ContactTitle}"/>
+                <DataGridTextColumn x:Name="countryColumn" Width="SizeToHeader" Header="Country" Binding="{Binding Country}"/>
+                <DataGridTextColumn x:Name="customerIdColumn" Width="SizeToHeader" Header="Customer Id" Binding="{Binding CustomerId}"/>
+                <DataGridTextColumn x:Name="faxColumn" Width="SizeToHeader" Header="Fax" Binding="{Binding Fax}"/>
+                <DataGridTextColumn x:Name="phoneColumn" Width="SizeToHeader" Header="Phone" Binding="{Binding Phone}"/>
+                <DataGridTextColumn x:Name="postalCodeColumn" Width="SizeToHeader" Header="Postal Code" Binding="{Binding PostalCode}"/>
+                <DataGridTextColumn x:Name="regionColumn" Width="SizeToHeader" Header="Region" Binding="{Binding Region}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="1" VerticalAlignment="Bottom" Height="40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Select" Name="_selectButton" HorizontalAlignment="Right" Height="31"  VerticalAlignment="Center" Width="75" Margin="0,0,10,0" Click="_selectButton_Click"/>
+            <Button Grid.Column="1" Content="Cancel" Name="_cancelButton" HorizontalAlignment="Left" Height="31"  VerticalAlignment="Center" Width="75" Margin="10,0,0,0" Click="_cancelButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67403311-C33D-4C48-B53C-0F1589CEACA2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SD.LLBLGen.Pro.Examples.Auditing.GUI</RootNamespace>
+    <AssemblyName>SD.LLBLGen.Pro.Examples.Auditing.GUI</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses, Version=5.0.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <HintPath>..\packages\SD.LLBLGen.Pro.ORMSupportClasses.5.0.0\lib\net45\SD.LLBLGen.Pro.ORMSupportClasses.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <HintPath>..\packages\SD.LLBLGen.Pro.ORMSupportClasses.Web.5.0.0\lib\net35\SD.LLBLGen.Pro.ORMSupportClasses.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNew.aspx.cs">
+      <DependentUpon>AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNew.aspx.designer.cs">
+      <DependentUpon>AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditAuditActionType.ascx.designer.cs">
+      <DependentUpon>EditAuditActionType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditAuditInfo.ascx.designer.cs">
+      <DependentUpon>EditAuditInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditCategory.ascx.designer.cs">
+      <DependentUpon>EditCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditCustomer.ascx.designer.cs">
+      <DependentUpon>EditCustomer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditCustomerCustomerDemo.ascx.designer.cs">
+      <DependentUpon>EditCustomerCustomerDemo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditCustomerDemography.ascx.designer.cs">
+      <DependentUpon>EditCustomerDemography.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditEmployee.ascx.designer.cs">
+      <DependentUpon>EditEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditEmployeeTerritory.ascx.designer.cs">
+      <DependentUpon>EditEmployeeTerritory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditOrder.ascx.designer.cs">
+      <DependentUpon>EditOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditOrderAuditInfo.ascx.designer.cs">
+      <DependentUpon>EditOrderAuditInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditOrderDetail.ascx.designer.cs">
+      <DependentUpon>EditOrderDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditProduct.ascx.designer.cs">
+      <DependentUpon>EditProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditRegion.ascx.designer.cs">
+      <DependentUpon>EditRegion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditShipper.ascx.designer.cs">
+      <DependentUpon>EditShipper.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditSupplier.ascx.designer.cs">
+      <DependentUpon>EditSupplier.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditTerritory.ascx.designer.cs">
+      <DependentUpon>EditTerritory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditUser.ascx.designer.cs">
+      <DependentUpon>EditUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListAuditActionTypeInstances.ascx.designer.cs">
+      <DependentUpon>ListAuditActionTypeInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListAuditInfoInstances.ascx.designer.cs">
+      <DependentUpon>ListAuditInfoInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListCategoryInstances.ascx.designer.cs">
+      <DependentUpon>ListCategoryInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListCustomerCustomerDemoInstances.ascx.designer.cs">
+      <DependentUpon>ListCustomerCustomerDemoInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListCustomerDemographyInstances.ascx.designer.cs">
+      <DependentUpon>ListCustomerDemographyInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListCustomerInstances.ascx.designer.cs">
+      <DependentUpon>ListCustomerInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListEmployeeInstances.ascx.designer.cs">
+      <DependentUpon>ListEmployeeInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListEmployeeTerritoryInstances.ascx.designer.cs">
+      <DependentUpon>ListEmployeeTerritoryInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListOrderAuditInfoInstances.ascx.designer.cs">
+      <DependentUpon>ListOrderAuditInfoInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListOrderDetailInstances.ascx.designer.cs">
+      <DependentUpon>ListOrderDetailInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListOrderInstances.ascx.designer.cs">
+      <DependentUpon>ListOrderInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListProductInstances.ascx.designer.cs">
+      <DependentUpon>ListProductInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListRegionInstances.ascx.designer.cs">
+      <DependentUpon>ListRegionInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListShipperInstances.ascx.designer.cs">
+      <DependentUpon>ListShipperInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListSupplierInstances.ascx.designer.cs">
+      <DependentUpon>ListSupplierInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListTerritoryInstances.ascx.designer.cs">
+      <DependentUpon>ListTerritoryInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListUserInstances.ascx.designer.cs">
+      <DependentUpon>ListUserInstances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchAuditActionType.ascx.designer.cs">
+      <DependentUpon>SearchAuditActionType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchAuditInfo.ascx.designer.cs">
+      <DependentUpon>SearchAuditInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchCategory.ascx.designer.cs">
+      <DependentUpon>SearchCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchCustomer.ascx.designer.cs">
+      <DependentUpon>SearchCustomer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchCustomerCustomerDemo.ascx.designer.cs">
+      <DependentUpon>SearchCustomerCustomerDemo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchCustomerDemography.ascx.designer.cs">
+      <DependentUpon>SearchCustomerDemography.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchEmployee.ascx.designer.cs">
+      <DependentUpon>SearchEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchEmployeeTerritory.ascx.designer.cs">
+      <DependentUpon>SearchEmployeeTerritory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchOrder.ascx.designer.cs">
+      <DependentUpon>SearchOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchOrderAuditInfo.ascx.designer.cs">
+      <DependentUpon>SearchOrderAuditInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchOrderDetail.ascx.designer.cs">
+      <DependentUpon>SearchOrderDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchProduct.ascx.designer.cs">
+      <DependentUpon>SearchProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchRegion.ascx.designer.cs">
+      <DependentUpon>SearchRegion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchShipper.ascx.designer.cs">
+      <DependentUpon>SearchShipper.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchSupplier.ascx.designer.cs">
+      <DependentUpon>SearchSupplier.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchTerritory.ascx.designer.cs">
+      <DependentUpon>SearchTerritory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchUser.ascx.designer.cs">
+      <DependentUpon>SearchUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToAuditActionType.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToAuditActionType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToAuditInfo.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToAuditInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCategory.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCustomer.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToCustomer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCustomerCustomerDemo.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToCustomerCustomerDemo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCustomerDemography.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToCustomerDemography.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToEmployee.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToEmployeeTerritory.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToEmployeeTerritory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToOrder.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToOrderAuditInfo.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToOrderAuditInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToOrderDetail.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToOrderDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToProduct.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToRegion.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToRegion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToShipper.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToShipper.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToSupplier.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToSupplier.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToTerritory.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToTerritory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToUser.ascx.designer.cs">
+      <DependentUpon>ViewRelatedToUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteExisting.aspx.designer.cs">
+      <DependentUpon>DeleteExisting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditExisting.aspx.designer.cs">
+      <DependentUpon>EditExisting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HelperControls\DateTextBox.ascx.designer.cs">
+      <DependentUpon>DateTextBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListAll.aspx.designer.cs">
+      <DependentUpon>ListAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListSubSet.aspx.designer.cs">
+      <DependentUpon>ListSubSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\GeneralUtils.cs" />
+    <Compile Include="App_Code\Interfaces.cs" />
+    <Compile Include="Controls\EditAuditActionType.ascx.cs">
+      <DependentUpon>EditAuditActionType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditAuditInfo.ascx.cs">
+      <DependentUpon>EditAuditInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditCategory.ascx.cs">
+      <DependentUpon>EditCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditCustomer.ascx.cs">
+      <DependentUpon>EditCustomer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditCustomerCustomerDemo.ascx.cs">
+      <DependentUpon>EditCustomerCustomerDemo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditCustomerDemography.ascx.cs">
+      <DependentUpon>EditCustomerDemography.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditEmployee.ascx.cs">
+      <DependentUpon>EditEmployee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditEmployeeTerritory.ascx.cs">
+      <DependentUpon>EditEmployeeTerritory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditOrder.ascx.cs">
+      <DependentUpon>EditOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditOrderAuditInfo.ascx.cs">
+      <DependentUpon>EditOrderAuditInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditOrderDetail.ascx.cs">
+      <DependentUpon>EditOrderDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditProduct.ascx.cs">
+      <DependentUpon>EditProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditRegion.ascx.cs">
+      <DependentUpon>EditRegion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditShipper.ascx.cs">
+      <DependentUpon>EditShipper.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditSupplier.ascx.cs">
+      <DependentUpon>EditSupplier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditTerritory.ascx.cs">
+      <DependentUpon>EditTerritory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditUser.ascx.cs">
+      <DependentUpon>EditUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListAuditActionTypeInstances.ascx.cs">
+      <DependentUpon>ListAuditActionTypeInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListAuditInfoInstances.ascx.cs">
+      <DependentUpon>ListAuditInfoInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListCategoryInstances.ascx.cs">
+      <DependentUpon>ListCategoryInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListCustomerCustomerDemoInstances.ascx.cs">
+      <DependentUpon>ListCustomerCustomerDemoInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListCustomerDemographyInstances.ascx.cs">
+      <DependentUpon>ListCustomerDemographyInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListCustomerInstances.ascx.cs">
+      <DependentUpon>ListCustomerInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListEmployeeInstances.ascx.cs">
+      <DependentUpon>ListEmployeeInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListEmployeeTerritoryInstances.ascx.cs">
+      <DependentUpon>ListEmployeeTerritoryInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListOrderAuditInfoInstances.ascx.cs">
+      <DependentUpon>ListOrderAuditInfoInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListOrderDetailInstances.ascx.cs">
+      <DependentUpon>ListOrderDetailInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListOrderInstances.ascx.cs">
+      <DependentUpon>ListOrderInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListProductInstances.ascx.cs">
+      <DependentUpon>ListProductInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListRegionInstances.ascx.cs">
+      <DependentUpon>ListRegionInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListShipperInstances.ascx.cs">
+      <DependentUpon>ListShipperInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListSupplierInstances.ascx.cs">
+      <DependentUpon>ListSupplierInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListTerritoryInstances.ascx.cs">
+      <DependentUpon>ListTerritoryInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListUserInstances.ascx.cs">
+      <DependentUpon>ListUserInstances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchAuditActionType.ascx.cs">
+      <DependentUpon>SearchAuditActionType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchAuditInfo.ascx.cs">
+      <DependentUpon>SearchAuditInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchCategory.ascx.cs">
+      <DependentUpon>SearchCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchCustomer.ascx.cs">
+      <DependentUpon>SearchCustomer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchCustomerCustomerDemo.ascx.cs">
+      <DependentUpon>SearchCustomerCustomerDemo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchCustomerDemography.ascx.cs">
+      <DependentUpon>SearchCustomerDemography.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchEmployee.ascx.cs">
+      <DependentUpon>SearchEmployee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchEmployeeTerritory.ascx.cs">
+      <DependentUpon>SearchEmployeeTerritory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchOrder.ascx.cs">
+      <DependentUpon>SearchOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchOrderAuditInfo.ascx.cs">
+      <DependentUpon>SearchOrderAuditInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchOrderDetail.ascx.cs">
+      <DependentUpon>SearchOrderDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchProduct.ascx.cs">
+      <DependentUpon>SearchProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchRegion.ascx.cs">
+      <DependentUpon>SearchRegion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchShipper.ascx.cs">
+      <DependentUpon>SearchShipper.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchSupplier.ascx.cs">
+      <DependentUpon>SearchSupplier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchTerritory.ascx.cs">
+      <DependentUpon>SearchTerritory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchUser.ascx.cs">
+      <DependentUpon>SearchUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToAuditActionType.ascx.cs">
+      <DependentUpon>ViewRelatedToAuditActionType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToAuditInfo.ascx.cs">
+      <DependentUpon>ViewRelatedToAuditInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCategory.ascx.cs">
+      <DependentUpon>ViewRelatedToCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCustomer.ascx.cs">
+      <DependentUpon>ViewRelatedToCustomer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCustomerCustomerDemo.ascx.cs">
+      <DependentUpon>ViewRelatedToCustomerCustomerDemo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToCustomerDemography.ascx.cs">
+      <DependentUpon>ViewRelatedToCustomerDemography.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToEmployee.ascx.cs">
+      <DependentUpon>ViewRelatedToEmployee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToEmployeeTerritory.ascx.cs">
+      <DependentUpon>ViewRelatedToEmployeeTerritory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToOrder.ascx.cs">
+      <DependentUpon>ViewRelatedToOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToOrderAuditInfo.ascx.cs">
+      <DependentUpon>ViewRelatedToOrderAuditInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToOrderDetail.ascx.cs">
+      <DependentUpon>ViewRelatedToOrderDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToProduct.ascx.cs">
+      <DependentUpon>ViewRelatedToProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToRegion.ascx.cs">
+      <DependentUpon>ViewRelatedToRegion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToShipper.ascx.cs">
+      <DependentUpon>ViewRelatedToShipper.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToSupplier.ascx.cs">
+      <DependentUpon>ViewRelatedToSupplier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToTerritory.ascx.cs">
+      <DependentUpon>ViewRelatedToTerritory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewRelatedToUser.ascx.cs">
+      <DependentUpon>ViewRelatedToUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteExisting.aspx.cs">
+      <DependentUpon>DeleteExisting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditExisting.aspx.cs">
+      <DependentUpon>EditExisting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelperControls\DateTextBox.ascx.cs">
+      <DependentUpon>DateTextBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListAll.aspx.cs">
+      <DependentUpon>ListAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListSubSet.aspx.cs">
+      <DependentUpon>ListSubSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.master.cs">
+      <DependentUpon>Main.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.master.designer.cs">
+      <DependentUpon>Main.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewExisting.aspx.cs">
+      <DependentUpon>ViewExisting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewExisting.aspx.designer.cs">
+      <DependentUpon>ViewExisting.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\.svn\entries" />
+    <None Include="App_Themes\.svn\format" />
+    <None Include="App_Themes\Default\.svn\entries" />
+    <None Include="App_Themes\Default\.svn\format" />
+    <None Include="App_Themes\Default\.svn\text-base\Default.css.svn-base" />
+    <None Include="App_Themes\Default\.svn\text-base\Default.skin.svn-base" />
+    <Content Include="App_Themes\Default\Default.skin" />
+    <None Include="Controls\.svn\entries" />
+    <None Include="Controls\.svn\format" />
+    <None Include="Controls\.svn\text-base\EditAuditActionType.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditAuditActionType.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditAuditInfo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditAuditInfo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCategory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCategory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCustomer.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCustomer.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCustomerCustomerDemo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCustomerCustomerDemo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCustomerDemography.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditCustomerDemography.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditEmployee.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditEmployee.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditEmployeeTerritory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditEmployeeTerritory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditOrder.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditOrder.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditOrderAuditInfo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditOrderAuditInfo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditOrderDetail.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditOrderDetail.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditProduct.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditProduct.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditRegion.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditRegion.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditShipper.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditShipper.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditSupplier.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditSupplier.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditTerritory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditTerritory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\EditUser.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\EditUser.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListAuditActionTypeInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListAuditActionTypeInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListAuditInfoInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListAuditInfoInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCategoryInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCategoryInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCustomerCustomerDemoInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCustomerCustomerDemoInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCustomerDemographyInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCustomerDemographyInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCustomerInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListCustomerInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListEmployeeInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListEmployeeInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListEmployeeTerritoryInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListEmployeeTerritoryInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListOrderAuditInfoInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListOrderAuditInfoInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListOrderDetailInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListOrderDetailInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListOrderInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListOrderInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListProductInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListProductInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListRegionInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListRegionInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListShipperInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListShipperInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListSupplierInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListSupplierInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListTerritoryInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListTerritoryInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ListUserInstances.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ListUserInstances.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchAuditActionType.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchAuditActionType.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchAuditInfo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchAuditInfo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCategory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCategory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCustomer.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCustomer.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCustomerCustomerDemo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCustomerCustomerDemo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCustomerDemography.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchCustomerDemography.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchEmployee.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchEmployee.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchEmployeeTerritory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchEmployeeTerritory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchOrder.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchOrder.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchOrderAuditInfo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchOrderAuditInfo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchOrderDetail.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchOrderDetail.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchProduct.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchProduct.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchRegion.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchRegion.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchShipper.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchShipper.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchSupplier.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchSupplier.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchTerritory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchTerritory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchUser.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\SearchUser.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToAuditActionType.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToAuditActionType.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToAuditInfo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToAuditInfo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCategory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCategory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCustomer.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCustomer.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCustomerCustomerDemo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCustomerCustomerDemo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCustomerDemography.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToCustomerDemography.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToEmployee.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToEmployee.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToEmployeeTerritory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToEmployeeTerritory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToOrder.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToOrder.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToOrderAuditInfo.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToOrderAuditInfo.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToOrderDetail.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToOrderDetail.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToProduct.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToProduct.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToRegion.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToRegion.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToShipper.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToShipper.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToSupplier.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToSupplier.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToTerritory.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToTerritory.ascx.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToUser.ascx.cs.svn-base" />
+    <None Include="Controls\.svn\text-base\ViewRelatedToUser.ascx.svn-base" />
+    <None Include="HelperControls\.svn\entries" />
+    <None Include="HelperControls\.svn\format" />
+    <None Include="HelperControls\.svn\text-base\DateTextBox.ascx.cs.svn-base" />
+    <None Include="HelperControls\.svn\text-base\DateTextBox.ascx.svn-base" />
+    <Content Include="Main.master" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddNew.aspx" />
+    <Content Include="App_Themes\Default\Default.css" />
+    <Content Include="Controls\EditAuditActionType.ascx" />
+    <Content Include="Controls\EditAuditInfo.ascx" />
+    <Content Include="Controls\EditCategory.ascx" />
+    <Content Include="Controls\EditCustomer.ascx" />
+    <Content Include="Controls\EditCustomerCustomerDemo.ascx" />
+    <Content Include="Controls\EditCustomerDemography.ascx" />
+    <Content Include="Controls\EditEmployee.ascx" />
+    <Content Include="Controls\EditEmployeeTerritory.ascx" />
+    <Content Include="Controls\EditOrder.ascx" />
+    <Content Include="Controls\EditOrderAuditInfo.ascx" />
+    <Content Include="Controls\EditOrderDetail.ascx" />
+    <Content Include="Controls\EditProduct.ascx" />
+    <Content Include="Controls\EditRegion.ascx" />
+    <Content Include="Controls\EditShipper.ascx" />
+    <Content Include="Controls\EditSupplier.ascx" />
+    <Content Include="Controls\EditTerritory.ascx" />
+    <Content Include="Controls\EditUser.ascx" />
+    <Content Include="Controls\ListAuditActionTypeInstances.ascx" />
+    <Content Include="Controls\ListAuditInfoInstances.ascx" />
+    <Content Include="Controls\ListCategoryInstances.ascx" />
+    <Content Include="Controls\ListCustomerCustomerDemoInstances.ascx" />
+    <Content Include="Controls\ListCustomerDemographyInstances.ascx" />
+    <Content Include="Controls\ListCustomerInstances.ascx" />
+    <Content Include="Controls\ListEmployeeInstances.ascx" />
+    <Content Include="Controls\ListEmployeeTerritoryInstances.ascx" />
+    <Content Include="Controls\ListOrderAuditInfoInstances.ascx" />
+    <Content Include="Controls\ListOrderDetailInstances.ascx" />
+    <Content Include="Controls\ListOrderInstances.ascx" />
+    <Content Include="Controls\ListProductInstances.ascx" />
+    <Content Include="Controls\ListRegionInstances.ascx" />
+    <Content Include="Controls\ListShipperInstances.ascx" />
+    <Content Include="Controls\ListSupplierInstances.ascx" />
+    <Content Include="Controls\ListTerritoryInstances.ascx" />
+    <Content Include="Controls\ListUserInstances.ascx" />
+    <Content Include="Controls\SearchAuditActionType.ascx" />
+    <Content Include="Controls\SearchAuditInfo.ascx" />
+    <Content Include="Controls\SearchCategory.ascx" />
+    <Content Include="Controls\SearchCustomer.ascx" />
+    <Content Include="Controls\SearchCustomerCustomerDemo.ascx" />
+    <Content Include="Controls\SearchCustomerDemography.ascx" />
+    <Content Include="Controls\SearchEmployee.ascx" />
+    <Content Include="Controls\SearchEmployeeTerritory.ascx" />
+    <Content Include="Controls\SearchOrder.ascx" />
+    <Content Include="Controls\SearchOrderAuditInfo.ascx" />
+    <Content Include="Controls\SearchOrderDetail.ascx" />
+    <Content Include="Controls\SearchProduct.ascx" />
+    <Content Include="Controls\SearchRegion.ascx" />
+    <Content Include="Controls\SearchShipper.ascx" />
+    <Content Include="Controls\SearchSupplier.ascx" />
+    <Content Include="Controls\SearchTerritory.ascx" />
+    <Content Include="Controls\SearchUser.ascx" />
+    <Content Include="Controls\ViewRelatedToAuditActionType.ascx" />
+    <Content Include="Controls\ViewRelatedToAuditInfo.ascx" />
+    <Content Include="Controls\ViewRelatedToCategory.ascx" />
+    <Content Include="Controls\ViewRelatedToCustomer.ascx" />
+    <Content Include="Controls\ViewRelatedToCustomerCustomerDemo.ascx" />
+    <Content Include="Controls\ViewRelatedToCustomerDemography.ascx" />
+    <Content Include="Controls\ViewRelatedToEmployee.ascx" />
+    <Content Include="Controls\ViewRelatedToEmployeeTerritory.ascx" />
+    <Content Include="Controls\ViewRelatedToOrder.ascx" />
+    <Content Include="Controls\ViewRelatedToOrderAuditInfo.ascx" />
+    <Content Include="Controls\ViewRelatedToOrderDetail.ascx" />
+    <Content Include="Controls\ViewRelatedToProduct.ascx" />
+    <Content Include="Controls\ViewRelatedToRegion.ascx" />
+    <Content Include="Controls\ViewRelatedToShipper.ascx" />
+    <Content Include="Controls\ViewRelatedToSupplier.ascx" />
+    <Content Include="Controls\ViewRelatedToTerritory.ascx" />
+    <Content Include="Controls\ViewRelatedToUser.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DeleteExisting.aspx" />
+    <Content Include="EditExisting.aspx" />
+    <Content Include="HelperControls\DateTextBox.ascx" />
+    <Content Include="ListAll.aspx" />
+    <Content Include="ListSubSet.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="ViewExisting.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Auditors\DatabaseAuditorSpecific\SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditorSpecific.csproj">
+      <Project>{C5C8D122-CABD-4DB0-AB43-71308058BF89}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditorSpecific</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auditors\DatabaseAuditor\SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditor.csproj">
+      <Project>{1BCB0278-AB4A-4428-8D92-B287868E03AD}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.Auditing.Auditors.DatabaseAuditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auditors\SimpleTextFileAuditor\SD.LLBLGen.Pro.Examples.Auditing.Auditors.SimpleTextFileAuditor.csproj">
+      <Project>{E4A4721D-3803-4043-A304-5A0172AC9212}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.Auditing.Auditors.SimpleTextFileAuditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\SD.LLBLGen.Pro.Examples.Auditing.csproj">
+      <Project>{6E6BBB51-BE9A-41E9-BE20-91CAAB6938F5}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.Auditing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\SD.LLBLGen.Pro.Examples.AuditingDBSpecific.csproj">
+      <Project>{C2FB4C24-84A7-4E3A-A6AA-9837447ABCAA}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.AuditingDBSpecific</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SessionHelper\SD.LLBLGen.Pro.Examples.Auditing.SessionHelper.csproj">
+      <Project>{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.Auditing.SessionHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\.svn\prop-base\" />
+    <Folder Include="App_Themes\.svn\props\" />
+    <Folder Include="App_Themes\.svn\text-base\" />
+    <Folder Include="App_Themes\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\.svn\tmp\props\" />
+    <Folder Include="App_Themes\.svn\tmp\text-base\" />
+    <Folder Include="App_Themes\Default\.svn\prop-base\" />
+    <Folder Include="App_Themes\Default\.svn\props\" />
+    <Folder Include="App_Themes\Default\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\Default\.svn\tmp\props\" />
+    <Folder Include="App_Themes\Default\.svn\tmp\text-base\" />
+    <Folder Include="Controls\.svn\prop-base\" />
+    <Folder Include="Controls\.svn\props\" />
+    <Folder Include="Controls\.svn\tmp\prop-base\" />
+    <Folder Include="Controls\.svn\tmp\props\" />
+    <Folder Include="Controls\.svn\tmp\text-base\" />
+    <Folder Include="HelperControls\.svn\prop-base\" />
+    <Folder Include="HelperControls\.svn\props\" />
+    <Folder Include="HelperControls\.svn\tmp\prop-base\" />
+    <Folder Include="HelperControls\.svn\tmp\props\" />
+    <Folder Include="HelperControls\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2384</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

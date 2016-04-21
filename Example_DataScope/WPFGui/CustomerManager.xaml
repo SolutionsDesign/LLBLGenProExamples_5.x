@@ -1,0 +1,106 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:EntityClasses="clr-namespace:Northwind.DAL.EntityClasses;assembly=Northwind.DAL" mc:Ignorable="d" x:Class="Northwind.WPFGui.CustomerManager"
+        Title="CustomerManager" Height="549.85" Width="636">
+    <Window.Resources>
+        <CollectionViewSource x:Key="customerEntityViewSource" d:DesignSource="{d:DesignInstance {x:Type EntityClasses:CustomerEntity}, CreateList=True}"/>
+        <CollectionViewSource x:Key="customerEntityOrdersViewSource" Source="{Binding Orders, Source={StaticResource customerEntityViewSource}}"/>
+        <CollectionViewSource x:Key="customerEntityOrdersOrderDetailsViewSource" Source="{Binding OrderDetails, Source={StaticResource customerEntityOrdersViewSource}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource customerEntityOrdersViewSource}">
+        <GroupBox Header="Customer Information" Margin="10,10,13,0" VerticalAlignment="Top" Height="134">
+            <Grid x:Name="grid1" Margin="10,12,-2,6.04" DataContext="{StaticResource customerEntityViewSource}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto" MinWidth="147"/>
+                    <ColumnDefinition Width="Auto" MinWidth="115"/>
+                    <ColumnDefinition Width="Auto" MinWidth="209.828"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label VerticalAlignment="Center" Grid.Row="0" Margin="3,3,0,2.96" HorizontalAlignment="Left" Grid.Column="0" Content="Customer Id" Height="26" Width="75"/>
+                <TextBox x:Name="customerIdTextBox" Width="120" VerticalAlignment="Center" Text="{Binding CustomerId, Mode=OneWay}" Grid.Row="0" Margin="3,4,0,4.96" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                <Label VerticalAlignment="Center" Grid.Row="1" Margin="3,3.04,0,2.92" HorizontalAlignment="Left" Grid.Column="0" Content="Company Name" Height="26" Width="96"/>
+                <TextBox Grid.ColumnSpan="2" x:Name="companyNameTextBox" Width="200" VerticalAlignment="Center" Text="{Binding CompanyName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3,4.04,0,4.92" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                <Label VerticalAlignment="Center" Grid.Row="3" Margin="3,3.08,0,2.88" HorizontalAlignment="Left" Grid.Column="0" Content="Contact Title" Height="26" Width="77"/>
+                <TextBox x:Name="contactTitleTextBox" Width="120" VerticalAlignment="Center" Text="{Binding ContactTitle, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="3,4.08,0,4.88" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+                <Label VerticalAlignment="Center" Grid.Column="2" Grid.Row="3" Margin="4,3.08,0,2.88" HorizontalAlignment="Left" Content="Contact Name" Height="26" Width="86"/>
+                <TextBox x:Name="contactNameTextBox" VerticalAlignment="Center" Text="{Binding ContactName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="4,4.08,5.828,4.88" Height="23" Grid.Column="3"/>
+                <Button Name="_selectCustomerButton" Grid.Column="2" Grid.Row="0" Content="Select..." Height="23" VerticalAlignment="Top" Margin="0,4,59,0" Click="_selectCustomerButton_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Customer's Orders" Margin="10,149,13,46">
+            <Grid Margin="10,0,7,0.04">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" MinHeight="120"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <DataGrid Grid.Row="0" x:Name="ordersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,10" RowDetailsVisibilityMode="VisibleWhenSelected">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="customerIdColumn" Binding="{Binding CustomerId}" Header="Customer Id" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="employeeIdColumn" Binding="{Binding EmployeeId}" Header="Employee Id" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="freightColumn" Binding="{Binding Freight}" Header="Freight" Width="SizeToHeader"/>
+                        <DataGridTemplateColumn x:Name="orderDateColumn" Header="Order Date" Width="SizeToHeader">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker SelectedDate="{Binding OrderDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn x:Name="orderIdColumn" Binding="{Binding OrderId}" Header="Order Id" Width="SizeToHeader"/>
+                        <DataGridTemplateColumn x:Name="requiredDateColumn" Header="Required Date" Width="SizeToHeader">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker SelectedDate="{Binding RequiredDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn x:Name="shipAddressColumn" Binding="{Binding ShipAddress}" Header="Ship Address" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="shipCityColumn" Binding="{Binding ShipCity}" Header="Ship City" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="shipCountryColumn" Binding="{Binding ShipCountry}" Header="Ship Country" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="shipNameColumn" Binding="{Binding ShipName}" Header="Ship Name" Width="SizeToHeader"/>
+                        <DataGridTemplateColumn x:Name="shippedDateColumn" Header="Shipped Date" Width="SizeToHeader">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker SelectedDate="{Binding ShippedDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn x:Name="shipPostalCodeColumn" Binding="{Binding ShipPostalCode}" Header="Ship Postal Code" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="shipRegionColumn" Binding="{Binding ShipRegion}" Header="Ship Region" Width="SizeToHeader"/>
+                        <DataGridTextColumn x:Name="shipViaColumn" Binding="{Binding ShipVia}" Header="Ship Via" Width="SizeToHeader"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <GridSplitter Grid.Row="0" HorizontalAlignment="Stretch" Background="AliceBlue" ResizeDirection="Rows" ShowsPreview="True" Height="5" VerticalAlignment="Bottom"/>
+                <GroupBox Grid.Column="0" Grid.Row="1" Header="Current Order's Order Details"  Margin="0,0,0,9.85" >
+                    <DataGrid x:Name="orderDetailsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource customerEntityOrdersOrderDetailsViewSource}}" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10,10,7,8.04">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="discountColumn" Binding="{Binding Discount}" Header="Discount" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="orderIdColumn1" Binding="{Binding OrderId}" Header="Order Id" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="productIdColumn" Binding="{Binding ProductId}" Header="Product Id" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Quantity}" Header="Quantity" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="unitPriceColumn" Binding="{Binding UnitPrice}" Header="Unit Price" Width="SizeToHeader"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+        <Button Content="Save changes" Name="_saveChangesButton" HorizontalAlignment="Right" Width="102" Height="30" VerticalAlignment="Bottom" Margin="0,0,13,9.85" Click="_saveChangesButton_Click" IsEnabled="False"/>
+    </Grid>
+</Window>

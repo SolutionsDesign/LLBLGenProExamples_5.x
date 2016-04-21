@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization.GUI", "WinApplication\SD.LLBLGen.Pro.Examples.Authorization.GUI.csproj", "{8966079C-C740-4E61-AF04-F8E540547951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization", "DAL\SD.LLBLGen.Pro.Examples.Authorization.csproj", "{B2D05B5A-3004-4DBC-B96D-FCB6E8D99329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific", "DAL\SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific.csproj", "{D9AF1719-F8FF-4690-94FD-0135834D7E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization.LoginHelper", "LoginHelper\SD.LLBLGen.Pro.Examples.Authorization.LoginHelper.csproj", "{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization.Authorizers", "Authorizers\SD.LLBLGen.Pro.Examples.Authorization.Authorizers.csproj", "{60206EA9-36D7-4964-861F-D0B905717C32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8966079C-C740-4E61-AF04-F8E540547951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8966079C-C740-4E61-AF04-F8E540547951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8966079C-C740-4E61-AF04-F8E540547951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8966079C-C740-4E61-AF04-F8E540547951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D05B5A-3004-4DBC-B96D-FCB6E8D99329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D05B5A-3004-4DBC-B96D-FCB6E8D99329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D05B5A-3004-4DBC-B96D-FCB6E8D99329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D05B5A-3004-4DBC-B96D-FCB6E8D99329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9AF1719-F8FF-4690-94FD-0135834D7E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9AF1719-F8FF-4690-94FD-0135834D7E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9AF1719-F8FF-4690-94FD-0135834D7E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9AF1719-F8FF-4690-94FD-0135834D7E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60206EA9-36D7-4964-861F-D0B905717C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60206EA9-36D7-4964-861F-D0B905717C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60206EA9-36D7-4964-861F-D0B905717C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60206EA9-36D7-4964-861F-D0B905717C32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
