@@ -117,7 +117,7 @@ namespace SD.LLBLGenPro.Examples.GUI
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(508, 31);
 			this.label1.TabIndex = 27;
-			this.label1.Text = "LLBLGenPro v4 - Validation Examples";
+			this.label1.Text = "LLBLGen Pro v5.x - Validation Examples";
 			// 
 			// label2
 			// 

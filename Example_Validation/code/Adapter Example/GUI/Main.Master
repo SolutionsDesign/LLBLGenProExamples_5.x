@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>LLBLGen Pro v4.0 Validation Examples</title>
+    <title>LLBLGen Pro v5.x.0 Validation Examples</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,7 +39,7 @@
         <div id="header">
             <a href="default.aspx" title="Go to the home page">Northwind</a>
             <div id="slogan">
-                Validation examples using LLBLGen Pro v4 (Adapter Template)</div>
+                Validation examples using LLBLGen Pro v5.x (Adapter Template)</div>
         </div>
         <div id="content-container">
             <!-- 
@@ -78,7 +78,7 @@
                 <div id="footer">
                     <p>
                         <a href="http://www.llblgen.com">www.llblgen.com</a><br />
-                        © 2002-2013 Solutions Design 
+                        © 2002-2016 Solutions Design 
                     </p>
                 </div>
             </div>

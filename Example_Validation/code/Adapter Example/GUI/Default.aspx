@@ -5,7 +5,7 @@ Title="Home" %>
     <br />
     <br />
     This is a series of samples intended to demonstrate the <em>Validation </em>mechanism
-    of the LLBLGen Pro v4 framework. There are 4 examples, each one has its own features.<br />
+    of the LLBLGen Pro v5.x framework. There are 4 examples, each one has its own features.<br />
 </div>
     <div>
     <ul>
