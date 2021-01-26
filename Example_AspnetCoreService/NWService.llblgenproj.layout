@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LayoutInfo>
+  <ModelViews>
+    <ModelView Name="FulModel">
+      <EntityDefinitions>
+        <Entity Name=":Category" X="-70.42589" Y="770.494934" />
+        <Entity Name=":Customer" X="250.57402" Y="760.8643" />
+        <Entity Name=":Employee" X="250.574173" Y="1047.928" />
+        <Entity Name=":Order" X="571.574036" Y="736.864258" />
+        <Entity Name=":OrderDetail" X="571.5738" Y="356.452" />
+        <Entity Name=":Product" X="250.574066" Y="308.452148" />
+        <Entity Name=":Region" X="-70.4260559" Y="1272.38416" />
+        <Entity Name=":Shipper" X="250.57399" Y="594.277344" />
+        <Entity Name=":Supplier" X="-70.42635" Y="262.8146" />
+        <Entity Name=":Territory" X="-70.4264755" Y="1003.42108" />
+      </EntityDefinitions>
+    </ModelView>
+  </ModelViews>
+</LayoutInfo>

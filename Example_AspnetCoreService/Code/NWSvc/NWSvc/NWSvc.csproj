@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\DatabaseGeneric\NWService.Dal.csproj" />
+	  <ProjectReference Include="..\..\DatabaseSpecific\NWService.DalDBSpecific.csproj" />
+	  <ProjectReference Include="..\..\NWService.Dtos.Persistence\NWService.Dtos.Persistence.csproj" />
+	  <ProjectReference Include="..\..\NWService.Dtos\NWService.Dtos.csproj" />
+	</ItemGroup>
+
+</Project>
