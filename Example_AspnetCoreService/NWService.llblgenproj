@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--LLBLGen Pro v5.8 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
-<Project Version="5.8" TargetFrameworkName="LLBLGen Pro Runtime Framework" UseLegacyDefaults="false">
+<!--LLBLGen Pro v5.9 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
+<Project Version="5.9" TargetFrameworkName="LLBLGen Pro Runtime Framework" UseLegacyDefaults="false">
   <Properties>
     <Abbreviations />
     <Property Name="AdditionalTaskPerformerFolder" Value="" />
@@ -90,7 +90,9 @@
     <Property Name="UpdateCustomPropertiesAfterRelationalModelDataSync_v5" Value="false" />
     <Property Name="UseCustomFieldOrderingOnNewElements" Value="false" />
   </Properties>
-  <TypeShortcuts />
+  <TypeShortcuts>
+    <TypeShortcut Shortcut="CategoryType" Type="EnumTypes.CategoryType, EnumTypes" />
+  </TypeShortcuts>
   <IgnoredWarnings />
   <SavedSearchQueries />
   <CodeGenerationCyclePreferences>
@@ -113,6 +115,27 @@
       </LastUsedPreferences>
     </OutputType>
   </CodeGenerationCyclePreferences>
+  <OutputSettingValues>
+    <SettingValues>
+      <SettingValue Name="1:AdapterDbGenericSubFolderName" Value="DatabaseGeneric" Type="18" />
+      <SettingValue Name="1:AdapterDbSpecificNamespaceSuffix" Value="DatabaseSpecific" Type="18" />
+      <SettingValue Name="1:AdapterDbSpecificProjectFileSuffix" Value="DBSpecific" Type="18" />
+      <SettingValue Name="1:AdapterDbSpecificSubFolderName" Value="DatabaseSpecific" Type="18" />
+      <SettingValue Name="1:ConvertNulledReferenceTypesToDefaultValue" Value="true" Type="3" />
+      <SettingValue Name="1:EntityBaseClassNameDefault" Value="CommonEntityBase" Type="18" />
+      <SettingValue Name="1:FieldPropertyIsPublicDefault" Value="true" Type="3" />
+      <SettingValue Name="1:GenerateAsNullableTypeDefault" Value="true" Type="3" />
+      <SettingValue Name="1:GenerateEntityFieldFactory" Value="false" Type="3" />
+      <SettingValue Name="1:GenerateEntityFieldsFactory" Value="false" Type="3" />
+      <SettingValue Name="1:InlineValueTypedFields" Value="true" Type="3" />
+      <SettingValue Name="1:LazyLoadingWithoutResultReturnsNew" Value="false" Type="3" />
+      <SettingValue Name="1:NavigatorPropertyIsPublicDefault" Value="true" Type="3" />
+      <SettingValue Name="1:SupportedActionCombinations" Value="0,1,2,3,4,5,6,7" Type="18" />
+      <SettingValue Name="1:TdlEmitTimeDateInOutputFiles" Value="false" Type="3" />
+      <SettingValue Name="1:TypedListOutputTypeDefault" Value="PocoWithQuerySpecQuery" Type="18" />
+      <SettingValue Name="1:TypedViewOutputTypeDefault" Value="PocoWithQuerySpecQuery" Type="18" />
+    </SettingValues>
+  </OutputSettingValues>
   <CodeGenerationMetaDataDefaults>
     <TargetElement Type="256">
       <Defaults>
@@ -767,6 +790,7 @@
       <Settings>
         <Property Name="DerivedElementClassNameSuffix" Value="" />
         <Property Name="PrefixDenormalizedFieldsWithNavigatorName" Value="true" />
+        <Property Name="SyncDerivedElementNamesWithSourceElementNames" Value="false" />
       </Settings>
       <CodeGenerationCyclePreferences OutputType="3">
         <LastUsedPreferences>
