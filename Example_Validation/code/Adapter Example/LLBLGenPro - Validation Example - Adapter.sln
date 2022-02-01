@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Validators", "Validators\SD.LLBLGen.Pro.Examples.Validators.csproj", "{83B192A4-D345-493F-80EF-448042D373DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples", "DAL\SD.LLBLGen.Pro.Examples.csproj", "{E2C6873B-DBBB-441F-9654-101F824D2AD4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.ExamplesDBSpecific", "DAL\SD.LLBLGen.Pro.ExamplesDBSpecific.csproj", "{3B285F53-BC9E-44A4-AAE1-55BDDB1B534B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.ExamplesDBSpecific", "DAL\DatabaseSpecific\SD.LLBLGen.Pro.ExamplesDBSpecific.csproj", "{3B285F53-BC9E-44A4-AAE1-55BDDB1B534B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterWebApp", "GUI\AdapterWebApp.csproj", "{4D74B9FA-8E56-4D69-8211-DEE052A281F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.RegexHelper", "RegExHelper\SD.LLBLGen.Pro.Examples.RegexHelper.csproj", "{B9BE8C59-3AE5-4108-B8D2-CB3E9822A0AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples", "DAL\DatabaseGeneric\SD.LLBLGen.Pro.Examples.csproj", "{50834477-43F4-470B-B259-C8E6ECAD97B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{83B192A4-D345-493F-80EF-448042D373DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83B192A4-D345-493F-80EF-448042D373DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83B192A4-D345-493F-80EF-448042D373DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2C6873B-DBBB-441F-9654-101F824D2AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2C6873B-DBBB-441F-9654-101F824D2AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2C6873B-DBBB-441F-9654-101F824D2AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2C6873B-DBBB-441F-9654-101F824D2AD4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B285F53-BC9E-44A4-AAE1-55BDDB1B534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B285F53-BC9E-44A4-AAE1-55BDDB1B534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B285F53-BC9E-44A4-AAE1-55BDDB1B534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,6 +33,10 @@ Global
 		{B9BE8C59-3AE5-4108-B8D2-CB3E9822A0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9BE8C59-3AE5-4108-B8D2-CB3E9822A0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9BE8C59-3AE5-4108-B8D2-CB3E9822A0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50834477-43F4-470B-B259-C8E6ECAD97B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50834477-43F4-470B-B259-C8E6ECAD97B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50834477-43F4-470B-B259-C8E6ECAD97B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50834477-43F4-470B-B259-C8E6ECAD97B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
