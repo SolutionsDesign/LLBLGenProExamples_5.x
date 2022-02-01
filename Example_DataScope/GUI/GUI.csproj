@@ -28,7 +28,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -96,8 +96,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses, Version=5.0.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
-      <HintPath>..\packages\SD.LLBLGen.Pro.ORMSupportClasses.5.0.0\lib\net45\SD.LLBLGen.Pro.ORMSupportClasses.dll</HintPath>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses, Version=5.9.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27">
+      <HintPath>..\packages\SD.LLBLGen.Pro.ORMSupportClasses.5.9.0\lib\net452\SD.LLBLGen.Pro.ORMSupportClasses.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System">
@@ -199,12 +199,12 @@
       <Project>{186ECDB4-7429-4BA7-8909-6D394A6B1A83}</Project>
       <Name>Northwind.SSDAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\Northwind.DAL.csproj">
-      <Project>{079056F2-1A3F-41A7-81AB-E9B58FF2DD28}</Project>
+    <ProjectReference Include="..\DAL\DatabaseGeneric\Northwind.DAL.csproj">
+      <Project>{e1485f03-cdf1-4a54-bde3-869ab08a0f05}</Project>
       <Name>Northwind.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\Northwind.DALDBSpecific.csproj">
-      <Project>{EF9D40EA-2962-415B-B896-34EC8533FE6F}</Project>
+    <ProjectReference Include="..\DAL\DatabaseSpecific\Northwind.DALDBSpecific.csproj">
+      <Project>{cb58e566-546d-4fd4-bb94-25445860db30}</Project>
       <Name>Northwind.DALDBSpecific</Name>
     </ProjectReference>
   </ItemGroup>

@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{A2E51BDC-08D5-44C1-A579-39A722748ADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DAL", "DAL\Northwind.DAL.csproj", "{E1485F03-CDF1-4A54-BDE3-869AB08A0F05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DAL", "DAL\DatabaseGeneric\Northwind.DAL.csproj", "{E1485F03-CDF1-4A54-BDE3-869AB08A0F05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DALDBSpecific", "DAL\Northwind.DALDBSpecific.csproj", "{CB58E566-546D-4FD4-BB94-25445860DB30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DALDBSpecific", "DAL\DatabaseSpecific\Northwind.DALDBSpecific.csproj", "{CB58E566-546D-4FD4-BB94-25445860DB30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.BO", "BO\Northwind.BO\Northwind.BO.csproj", "{724F36E7-E471-47D5-80B9-AA416A17A3C5}"
 EndProject
