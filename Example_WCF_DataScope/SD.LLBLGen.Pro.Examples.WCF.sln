@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.WCF.Service", "Service\SD.LLBLGen.Pro.Examples.WCF.Service.csproj", "{057024D5-0A83-424B-B103-E5F184DA53CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.WCF", "DAL\SD.LLBLGen.Pro.Examples.WCF.csproj", "{2006F6AA-4EE9-4535-92C6-49E5F3EB82B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.WCF", "DAL\DatabaseGeneric\SD.LLBLGen.Pro.Examples.WCF.csproj", "{2006F6AA-4EE9-4535-92C6-49E5F3EB82B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.WCFDBSpecific", "DAL\SD.LLBLGen.Pro.Examples.WCFDBSpecific.csproj", "{E22BEB76-628A-4821-8CA7-F0AE15A861CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.WCFDBSpecific", "DAL\DatabaseSpecific\SD.LLBLGen.Pro.Examples.WCFDBSpecific.csproj", "{E22BEB76-628A-4821-8CA7-F0AE15A861CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.WCF.Host", "Host\SD.LLBLGen.Pro.Examples.WCF.Host.csproj", "{B06CBF47-D6A5-401D-8EEE-A99823376D67}"
 EndProject

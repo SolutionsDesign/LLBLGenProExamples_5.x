@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--LLBLGen Pro v5.0 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
-<Project Version="5.0" TargetFrameworkName="LLBLGen Pro Runtime Framework">
+<!--LLBLGen Pro v5.9 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
+<Project Version="5.9" TargetFrameworkName="LLBLGen Pro Runtime Framework">
   <Properties>
     <Abbreviations />
     <Property Name="AdditionalTaskPerformerFolder" Value="" />
@@ -16,10 +16,15 @@
     <Property Name="AutoAddManyToManyRelationships" Value="false" />
     <Property Name="AutoAssignSequencesToIntegerPks" Value="true" />
     <Property Name="AutoAssignTypeConverterToFieldMapping" Value="true" />
-    <Property Name="CleanUpVsNetProjects" Value="true" />
+    <Property Name="AutomaticallyGenerateSourceCodeOnProjectSave" Value="false" />
     <Property Name="ConnectionStringKeyNamePattern" Value="Main.ConnectionString.{$ProviderName}" />
+    <Property Name="DefaultDDLSQLScriptDestinationFolder" Value=".\DDLSQLScripts" />
     <Property Name="DefaultDeleteRuleAction" Value="1" />
+    <Property Name="DefaultSourceCodeDestinationFolder" Value=".\Code" />
     <Property Name="DefaultUpdateRuleAction" Value="0" />
+    <Property Name="DeleteObsoleteFiles" Value="true" />
+    <Property Name="ElementNamePrefixPattern" Value="{$SchemaName}" />
+    <Property Name="ElementNamePrefixPatternIsAppliedWhen" Value="1" />
     <Property Name="EncodingToUse" Value="0" />
     <Property Name="EntityActionCombinationDefaultForTable" Value="0" />
     <Property Name="EntityActionCombinationDefaultForView" Value="4" />
@@ -67,6 +72,8 @@
     <Property Name="SingularizeElementNames" Value="true" />
     <Property Name="StoredProcNameStripPattern" Value="{pr_, sp_}{}" />
     <Property Name="StoreTimeLastGeneratedIntoProject" Value="false" />
+    <Property Name="StoreTimeLastSyncIntoProject" Value="true" />
+    <Property Name="SyncCustomFieldOrderingWithTableFieldIndex" Value="false" />
     <Property Name="SyncMappedElementNamesAfterRefresh_v5" Value="false" />
     <Property Name="SyncMappedElementNamesAfterRelationalModelDataSync_v5" Value="false" />
     <Property Name="SyncRelationalModelDataElementNameWithModelElementName_v5" Value="false" />
@@ -83,7 +90,9 @@
     <Property Name="UpdateCustomPropertiesAfterRelationalModelDataSync_v5" Value="false" />
     <Property Name="UseCustomFieldOrderingOnNewElements" Value="false" />
   </Properties>
-  <TypeShortcuts />
+  <TypeShortcuts>
+    <TypeShortcut Shortcut="CategoryType" Type="EnumTypes.CategoryType, EnumTypes" />
+  </TypeShortcuts>
   <IgnoredWarnings />
   <SavedSearchQueries />
   <CodeGenerationCyclePreferences>
@@ -92,7 +101,7 @@
         <DestinationRootFolder Value="..\DAL" />
         <FrameworkName Value="LLBLGen Pro Runtime Framework" />
         <LanguageName Value="C#" />
-        <PlatformName Value=".NET 4.5" />
+        <PlatformName Value=".NET 4.5.2" />
         <PresetName Value="SD.Presets.Adapter.General" />
         <RootNamespace Value="SD.LLBLGen.Pro.Examples.WCF" />
         <TemplateGroup Value="Adapter" />
@@ -103,6 +112,7 @@
           <Binding Name="SD.TemplateBindings.SqlServerSpecific" />
           <Binding Name="SD.TemplateBindings.General" />
         </TemplateBindings>
+        <AdhocTemplateSets />
       </LastUsedPreferences>
     </OutputType>
   </CodeGenerationCyclePreferences>
@@ -114,9 +124,18 @@
       <SettingValue Name="1:AdapterDbSpecificProjectFileSuffix" Value="DBSpecific" Type="18" />
       <SettingValue Name="1:AdapterDbSpecificSubFolderName" Value="DatabaseSpecific" Type="18" />
       <SettingValue Name="1:ConvertNulledReferenceTypesToDefaultValue" Value="true" Type="3" />
+      <SettingValue Name="1:EntityBaseClassNameDefault" Value="CommonEntityBase" Type="18" />
+      <SettingValue Name="1:FieldPropertyIsPublicDefault" Value="true" Type="3" />
       <SettingValue Name="1:GenerateAsNullableTypeDefault" Value="true" Type="3" />
+      <SettingValue Name="1:GenerateEntityFieldFactory" Value="false" Type="3" />
+      <SettingValue Name="1:GenerateEntityFieldsFactory" Value="false" Type="3" />
+      <SettingValue Name="1:InlineValueTypedFields" Value="true" Type="3" />
       <SettingValue Name="1:LazyLoadingWithoutResultReturnsNew" Value="true" Type="3" />
+      <SettingValue Name="1:NavigatorPropertyIsPublicDefault" Value="true" Type="3" />
+      <SettingValue Name="1:SupportedActionCombinations" Value="0,1,2,3,4,5,6,7" Type="18" />
       <SettingValue Name="1:TdlEmitTimeDateInOutputFiles" Value="true" Type="3" />
+      <SettingValue Name="1:TypedListOutputTypeDefault" Value="TypedDataTable" Type="18" />
+      <SettingValue Name="1:TypedViewOutputTypeDefault" Value="TypedDataTable" Type="18" />
     </SettingValues>
   </OutputSettingValues>
   <CodeGenerationMetaDataDefaults>

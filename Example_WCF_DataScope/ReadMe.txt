@@ -67,4 +67,4 @@ Help and support
 ----------------
 LLBLGen Pro Help
 LLGLGen Pro Reference Manual
-http://www.llblgen.com/tinyforum
+https://www.llblgen.com/tinyforum
