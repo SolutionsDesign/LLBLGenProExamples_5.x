@@ -98,13 +98,13 @@
   <CodeGenerationCyclePreferences>
     <OutputType Value="3">
       <LastUsedPreferences>
-        <DestinationRootFolder Value="..\Code\Adapter\DAL" />
+        <DestinationRootFolder Value="..\Code\SelfServicing\DAL" />
         <FrameworkName Value="LLBLGen Pro Runtime Framework" />
         <LanguageName Value="C#" />
         <PlatformName Value=".NET Standard 2.1" />
-        <PresetName Value="SD.Presets.Adapter.General.Netstandard" />
+        <PresetName Value="SD.Presets.SelfServicing.General.Netstandard" />
         <RootNamespace Value="SD.LLBLGen.Pro.Examples.Auditing" />
-        <TemplateGroup Value="Adapter" />
+        <TemplateGroup Value="SelfServicing" />
         <TemplateBindings>
           <Binding Name="SD.TemplateBindings.SharedTemplates.Netstandard21" />
           <Binding Name="SD.TemplateBindings.SharedTemplates" />
