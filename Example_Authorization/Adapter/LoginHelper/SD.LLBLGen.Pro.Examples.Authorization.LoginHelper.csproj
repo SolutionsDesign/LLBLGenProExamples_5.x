@@ -16,7 +16,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -53,8 +53,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses, Version=5.0.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
-      <HintPath>..\packages\SD.LLBLGen.Pro.ORMSupportClasses.5.0.0\lib\net45\SD.LLBLGen.Pro.ORMSupportClasses.dll</HintPath>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses, Version=5.9.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27">
+      <HintPath>..\packages\SD.LLBLGen.Pro.ORMSupportClasses.5.9.0\lib\net452\SD.LLBLGen.Pro.ORMSupportClasses.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -69,16 +69,6 @@
   <ItemGroup>
     <Compile Include="LoginHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DAL\SD.LLBLGen.Pro.Examples.Authorization.csproj">
-      <Project>{167E166F-F484-491D-B491-EC8340F466F3}</Project>
-      <Name>SD.LLBLGen.Pro.Examples.Authorization</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific.csproj">
-      <Project>{D9230DBC-9F9F-4DAD-9378-9DFD89E0C970}</Project>
-      <Name>SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -106,6 +96,16 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DatabaseGeneric\SD.LLBLGen.Pro.Examples.Authorization.csproj">
+      <Project>{b2d05b5a-3004-4dbc-b96d-fcb6e8d99329}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.Authorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DatabaseSpecific\SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific.csproj">
+      <Project>{d9af1719-f8ff-4690-94fd-0135834d7e93}</Project>
+      <Name>SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

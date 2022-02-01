@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization.GUI", "WinApplication\SD.LLBLGen.Pro.Examples.Authorization.GUI.csproj", "{8966079C-C740-4E61-AF04-F8E540547951}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization", "DAL\SD.LLBLGen.Pro.Examples.Authorization.csproj", "{B2D05B5A-3004-4DBC-B96D-FCB6E8D99329}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization", "DAL\DatabaseGeneric\SD.LLBLGen.Pro.Examples.Authorization.csproj", "{B2D05B5A-3004-4DBC-B96D-FCB6E8D99329}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific", "DAL\SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific.csproj", "{D9AF1719-F8FF-4690-94FD-0135834D7E93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific", "DAL\DatabaseSpecific\SD.LLBLGen.Pro.Examples.AuthorizationDBSpecific.csproj", "{D9AF1719-F8FF-4690-94FD-0135834D7E93}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.LLBLGen.Pro.Examples.Authorization.LoginHelper", "LoginHelper\SD.LLBLGen.Pro.Examples.Authorization.LoginHelper.csproj", "{FA50FF0A-47C8-47C0-8550-2AF8F72016A1}"
 EndProject
